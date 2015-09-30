@@ -1,12 +1,3 @@
-# Directories
-libsrc/
-attic/
-.DS_Store/
-src/.DS_Store/
-bitmaps/.DS_Store/
-lib/.DS_Store/
-obj/.DS_Store/
-
 # Object files
 *.o
 *.ko
@@ -19,6 +10,7 @@ obj/.DS_Store/
 
 # Libraries
 *.lib
+*.a
 *.la
 *.lo
 
