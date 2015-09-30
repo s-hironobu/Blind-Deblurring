@@ -25,10 +25,10 @@ Screenshot
 
 
 **deblurring...**
-![alt text](http://www.interdb.jp/screenshot02.jpg)
+![alt text](http://www.interdb.jp/screenshot2.jpg)
 
 **after deblurring**
-![alt text](http://www.interdb.jp/screenshot03.jpg)
+![alt text](http://www.interdb.jp/screenshot3.jpg)
 
 
 
