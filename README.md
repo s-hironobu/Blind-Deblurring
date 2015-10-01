@@ -10,7 +10,7 @@ This is a blind deblurring tool. It only works on Linux, and requires the follow
 
 I provide the source code of a part of GUI, and a static library of deblurring engine.
 
-I have no plan to provide the source code of the deblurring engine since it is the top secret :-) Honestly speaking, the engine has huge numbers of bugs, so I can't release it yet.
+I have no plan to provide the source code of the deblurring engine since it's a top secret :-) Honestly speaking, the engine has huge numbers of bugs, so I can't release it yet.
 
 My final goal is to make the best deblurring tool, and I thought it is easy  because it's just to make a solver of a classical nonlinear optimization program. But, as you can see, I had misunderstood.  The destination is far away.
 

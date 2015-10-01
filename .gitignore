@@ -7,6 +7,7 @@ bitmaps/.DS_Store/
 lib/.DS_Store/
 obj/.DS_Store/
 
+
 # Object files
 *.o
 *.ko
