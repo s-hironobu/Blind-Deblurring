@@ -7,8 +7,7 @@ This is a blind deblurring tool. It only works on Linux, and requires the follow
  - [fftw3.4]
  - [Eigen 3]
 
-This tool is composed of a static library of a deblurring engine and a GUI.
-Its engine is provided as a static library because source code of this engine is a top secret :-) Honestly speaking, it has huge numbers of bugs, so I have no plan to provide it.
+This tool is composed of a deblurring engine and a GUI. Its engine is provided as a static library because source code of this engine is a top secret :-) Honestly speaking, it has huge numbers of bugs, so I have no plan to provide it.
 
 My goal is to make the best deblurring tool, and I thought it is easy  because it's just to make a solver of classical nonlinear optimization problem. But, as you can see, I had misunderstood. The destination is far away.
 
