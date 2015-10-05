@@ -13,7 +13,7 @@ I provide a binary image, so you can try it.
 
     $ ./blindDeblur
 
-My goal is to make the best deblurring tool, and I thought it is easy  because it's just to make a solver of classical nonlinear optimization problem. But, I had misunderstood. The destination is far away.
+My goal is to make the best deblurring tool, and I thought it is easy  because it's just to make a solver of classical nonlinear optimization problem. But I had misunderstood. The destination is far away.
 
 
 This tool is the first small step for me, and I'm going to improve it.
