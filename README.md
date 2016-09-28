@@ -80,7 +80,7 @@ If you use other OS, run your vnc-client.
 #### [4] Open terminal and Run
 
 Open a terminal and change directory to `blind-deblurring`.
-Then, run `blind-deblurring`.
+Then, run `blindDeblur`.
 
 ```
 [vagrant@localhost ~]$ cd blind-deblurring
