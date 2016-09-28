@@ -4,8 +4,7 @@
 This is a blind deblurring system which is based on this paper: ["Blind deconvolution using alternating maximum a posteriori estimation with heavy-tailed priors"](https://users.soe.ucsc.edu/~milanfar/publications/conf/CAIP_paper_154.pdf).
 
 
-The source code of the system I made is uploaded on [my GitHub repository](https://github.com/s-hironobu/AlgorithmCollection),
-and also I provide a [vagrant-box](https://atlas.hashicorp.com/s-hironobu/boxes/centos7-blind-deblur) that contains both binary and source code, so you can easily try it.
+I provide a [vagrant-box](https://atlas.hashicorp.com/s-hironobu/boxes/centos7-blind-deblur) that contains both binary and source code, so you can easily try it.
 
 The most important remaining work is **to reduce ringing artifacts**.
 Honestly speaking, I had been trying it until this summer when I had time, but I could not do it.
