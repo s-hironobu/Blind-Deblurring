@@ -1,26 +1,98 @@
-# Blind-Deblurring
+# Blind-Deblurring System
 
-This is a blind deblurring tool. It only works on Linux, and requires the following libraries:
+
+This is a blind deblurring system which is based on this paper: ["Blind deconvolution using alternating maximum a posteriori estimation with heavy-tailed priors"](https://users.soe.ucsc.edu/~milanfar/publications/conf/CAIP_paper_154.pdf).
+
+
+The source code of the system I made is uploaded on [my GitHub repository](https://github.com/s-hironobu/AlgorithmCollection),
+and also I provide a [vagrant-box](https://atlas.hashicorp.com/s-hironobu/boxes/centos7-blind-deblur) that contains both binary and source code, so you can easily try it.
+
+The most important remaining work is **to reduce ringing artifacts**.
+Honestly speaking, I had been trying it until this summer when I had time, but I could not do it.
+I welcome the challengers of this task :-)
+
+
+In addition, the license of this system is *GPL2*.
+
+
+## Description
+
+This system runs on only Linux, and requires the following libraries:
 
  - [wxWidgets 3.0]
  - [OpenCV 2.4]
  - [fftw3.4]
  - [Eigen 3]
 
-This tool is composed of a deblurring engine and GUI. Its engine is provided as a static library because source code of this engine is a top secret :-) Honestly speaking, it has huge numbers of bugs, so I have no plan to provide it.
+This system is composed of a deblurring engine and a GUI sub-system.
 
-I provide a binary image, so you can try it.
-
-    $ ./blindDeblur
-
-My goal is to make the best deblurring tool, and I thought it is easy  because it's just to make a solver of classical nonlinear optimization problem. But I had misunderstood. The destination is far away.
+The engine is provided as a static library under the `lib` subdirectory, 
+and the source code of it is also provided under the `libsrc` subdirectory.
+If you recreate the static library, you have to execute `make` command on the *libsrc* subdirectory.
 
 
-This tool is the first small step for me, and I'm going to improve it.
+## Vagrant box
+
+### Requirement
+
+* [Vagrant](https://www.vagrantup.com/) 
+* [VirtualBox](https://www.virtualbox.org/)
+* vnc client
+
+### How to use
+
+#### [1] Create Vagrantfile
+
+Create a Vargantfile as shown below:
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "s-hironobu/centos7-blind-deblur"
+  config.vm.network "private_network", ip: "192.168.33.95"
+  config.vm.network :forwarded_port, guest: 5901, host: 5901
+end
+```
+#### [2] Start vm box
+
+Run `vagrant up`.
+
+```
+$ vagrant up
+```
+
+#### [3] Access VM via vnc client
+
+If you use OSX, run the following command:
+
+```
+$ open vnc://localhost:5901
+```
+
+Password is `vagrant`.
+
+![Figure 1:](http://www.interdb.jp/blinddeblurring/blind-deblurring.png)
+
+If you use other OS, run your vnc-client. 
 
 
-Screenshot
-----------
+#### [4] Open terminal and Run
+
+Open a terminal and change directory to `blind-deblurring`.
+Then, run `blind-deblurring`.
+
+```
+[vagrant@localhost ~]$ cd blind-deblurring
+[vagrant@localhost blind-deblurring]$  ./blindDeblur
+```
+
+Push `Deblur` button, and then adjust the sharpness of the deblurred image.
+
+
+## Screenshot
+
 **Original blurred image**
 ![alt text](http://www.interdb.jp/screenshot01.jpg)
 
@@ -28,9 +100,8 @@ Screenshot
 **deblurring...**
 ![alt text](http://www.interdb.jp/screenshot2.jpg)
 
-**after deblurring**
+**Deblurred image**
 ![alt text](http://www.interdb.jp/screenshot3.jpg)
-
 
 
 [wxWidgets 3.0]: https://www.wxwidgets.org/
