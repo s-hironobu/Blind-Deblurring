@@ -72,7 +72,6 @@ $ open vnc://localhost:5901
 
 Password is `vagrant`.
 
-![Figure 1:](http://www.interdb.jp/blinddeblurring/blind-deblurring.png)
 
 If you use other OS, run your vnc-client. 
 
@@ -93,14 +92,14 @@ Push `Deblur` button, and then adjust the sharpness of the deblurred image.
 ## Screenshot
 
 **Original blurred image**
-![alt text](http://www.interdb.jp/screenshot01.jpg)
+![alt text](./screenshot1.jpg)
 
 
 **deblurring...**
-![alt text](http://www.interdb.jp/screenshot2.jpg)
+![alt text](./screenshot2.jpg)
 
 **Deblurred image**
-![alt text](http://www.interdb.jp/screenshot3.jpg)
+![alt text](./screenshot3.jpg)
 
 
 [wxWidgets 3.0]: https://www.wxwidgets.org/
